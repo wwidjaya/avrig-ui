@@ -1,0 +1,33 @@
+{
+  "name": "@avrig/tokens",
+  "version": "0.1.0",
+  "description": "Design tokens and theme specifications for the avrig design system",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./theme.css": "./theme.css"
+  },
+  "files": [
+    "dist",
+    "theme.css"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:css": "tailwindcss -i theme.css -o dist/theme.css",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.3"
+  }
+}
